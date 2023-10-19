@@ -1,0 +1,39 @@
+.loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  div {
+    transform-origin: 40px 40px;
+    animation: loading 1.2s linear infinite;
+
+    &:after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 37px;
+      width: 6px;
+      height: 18px;
+      border-radius: 20%;
+      background: #fff;
+    }
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        transform: rotate(#{($i - 1) * 30deg});
+        animation-delay: #{-1.2s + $i * 0.1s};
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

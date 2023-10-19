@@ -1,0 +1,47 @@
+.volume {
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 0;
+  opacity: 0;
+  height: 3px;
+  margin-right: 0;
+  transition:
+    0.2s ease-in-out width,
+    margin-right,
+    opacity;
+  background: #777;
+  cursor: pointer;
+
+  .circle {
+    position: absolute;
+    top: 50%;
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    border-radius: 100%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in-out opacity;
+  }
+
+  .fill {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+  }
+}
+
+.volume:hover {
+  .slider {
+    margin-right: 1rem;
+    width: 60px;
+    opacity: 1;
+  }
+}

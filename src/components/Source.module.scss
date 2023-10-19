@@ -1,0 +1,34 @@
+.source {
+  position: relative;
+
+  button {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .picker {
+    background: #222;
+    border-radius: 6px;
+    position: absolute;
+    transform: translate(0, -100%);
+    top: -1rem;
+    right: 0;
+    font-size: 1rem;
+    overflow: hidden;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+
+      &:hover {
+        background: #555;
+      }
+    }
+  }
+}
